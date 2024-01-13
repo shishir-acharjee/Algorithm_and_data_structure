@@ -1,0 +1,9 @@
+int height(node* root){
+if(root==NULL) return 0;
+if(root->left==NULL && root->right==NULL) return 1;
+int l=height(root->left);
+int r=height(root->right);
+if(l>r) return l+1;
+else return r+1;
+
+}
